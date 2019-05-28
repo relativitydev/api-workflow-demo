@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C279A48A-77C4-4A7E-B699-7AA772D4E62B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>E2EEDRM.Helpers</RootNamespace>
+    <AssemblyName>E2EEDRM.Helpers</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="kCura.Relativity.Client, Version=10.2.99.73, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Relativity.Rsapi.10.2.99.73\lib\net462\kCura.Relativity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Relativity.Imaging.Services.Interfaces, Version=10.2.99.73, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Relativity.Imaging.SDK.10.2.99.73\lib\net462\Relativity.Imaging.Services.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Relativity.Processing.Services.Interfaces">
+      <HintPath>..\packages\10.1.169.1\Relativity.Processing.Services.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Relativity.Productions.Services.Interfaces, Version=10.2.22.185, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Relativity.Productions.Client.10.2.22\lib\net462\Relativity.Productions.Services.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Console2.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="ExportProductionHelper.cs" />
+    <Compile Include="Models\Imaging\ImagingProfileSaveRequest.cs" />
+    <Compile Include="Models\Imaging\ImagingSetSaveRequest.cs" />
+    <Compile Include="Models\Imaging\RunImagingJobRequest.cs" />
+    <Compile Include="Models\Processing\CustodianSaveRequest.cs" />
+    <Compile Include="Models\Processing\DiscoveryJobRequest.cs" />
+    <Compile Include="Models\Processing\InventoryJobRequest.cs" />
+    <Compile Include="Models\Processing\ProcessingDataSourceSaveRequest.cs" />
+    <Compile Include="Models\Processing\ProcessingProfileSaveRequest.cs" />
+    <Compile Include="Models\Processing\ProcessingSetSaveRequest.cs" />
+    <Compile Include="Models\Processing\PublishJobRequest.cs" />
+    <Compile Include="Models\Production\Production.cs" />
+    <Compile Include="Models\RDO\QueryRequest.cs" />
+    <Compile Include="Models\RDO\ReadRequest.cs" />
+    <Compile Include="Models\Review\CreateResponsiveFieldRequest.cs" />
+    <Compile Include="Models\Review\GetDocs.cs" />
+    <Compile Include="Models\Review\TaggingRequest.cs" />
+    <Compile Include="Models\Searching\BuilddtSearchIndexRequest.cs" />
+    <Compile Include="Models\Searching\DtSearchIndexSaveRequest.cs" />
+    <Compile Include="Models\Searching\DtSearchSaveRequest.cs" />
+    <Compile Include="Models\Searching\KeywordSearchCreateRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkspaceHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ProcessingDocuments\EN298619.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProcessingDocuments\EN298630.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProcessingDocuments\EN298641.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProcessingDocuments\EN298653.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProcessingDocuments\EN298664.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProcessingDocuments\EN298675.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProcessingDocuments\EN298686.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProcessingDocuments\EN298697.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProcessingDocuments\EN298771.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
