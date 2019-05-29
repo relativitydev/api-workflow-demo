@@ -17,6 +17,7 @@ To use the **Export Production feature**, follow the below instructions:
 - If a previous version of the Relativity Desktop Client (RDC) is installed on your machine then uninstall that version
 - In the project, double click kCura.WinEDDS64.Setup.msi executeable
     - Follow the instructions on the Setup Wizard to complete the install
+- You must manually launch and configure the RDC before you run the script.
 
 If using this workflow on a **Dev VM or an on-prem** Relativity Instance, please keep in mind the following:
 - You don't have to use the Transfer API feature, you can copy the files directly to the Processing Source location.
