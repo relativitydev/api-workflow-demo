@@ -1,6 +1,6 @@
 # api-workflow-demo
 
-This project has been **developed and tested only** in a **RelativityOne** instance. 
+Open Source Community: This project has been **developed and tested only** in a **RelativityOne** instance. 
 
 
 To enter your **RelativityOne Instance details**, follow the below instructions:
